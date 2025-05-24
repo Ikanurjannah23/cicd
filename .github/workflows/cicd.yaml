@@ -19,13 +19,14 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.27.0 '  # Match your local version
+          flutter-version: '3.27.0'  # Tidak ada spasi!
           cache: true
 
       - name: Validate Flutter & Dart versions
         run: |
           flutter --version
           dart --version
+
       - name: Run build APK
         run: flutter build apk --release
 
